@@ -1,9 +1,16 @@
 package main
 
-import "log/slog"
+import (
+	"fmt"
+	//"log/slog"
+	"url-shortener/internal/config"
+)
 
 func main() {
 	// init config: cleanenv (read json, yaml etc + tags)
+	cfg := config.MustLoad()
+
+	fmt.Println(cfg)
 
 	// init logger: slog 
 
